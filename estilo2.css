@@ -1,14 +1,14 @@
 :root {
-    --color-primario: #282f56;
-    --color-secundario: #2ecc71;
-    --color-texto: #000000;
-    --fuente-principal: 'Times New Roman';
-    --fuente-secundaria: 'Georgia', serif;
+    --color-primario: #0d0d0d;
+    --color-secundario: #ff004f;
+    --color-texto: #efff3a;
+    --fuente-principal: 'Orbitron', sans-serif;
+    --fuente-secundaria: 'Press Start 2P', cursive;
 }
 body {
     font-family: var(--fuente-principal);
     background-color: var(--color-primario);
-    color: white;
+    color: var(--color-texto);
     margin: 0;
     padding: 0;
     display: flex;
@@ -16,48 +16,64 @@ body {
     align-items: center;
     height: 100vh;
     width: 100%;
+    text-shadow: 0px 0px 8px var(--color-texto);
 }
 .img {
-    width: 50px;
+    width: 60px;
     border-radius: 50px;
     margin-bottom: 15px;
+    box-shadow: 0px 0px 12px var(--color-secundario);
 }
 .img-login {
     width: 100%;
     border-radius: 50%;
+    box-shadow: 0px 0px 15px var(--color-secundario);
 }
 .login-container {
-    background-color: var(--color-secundario);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(20, 20, 20, 0.9);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px var(--color-secundario);
     width: fit-content;
-    align-items: center;
-    flex-direction: row;
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid var(--color-secundario);
+    gap: 20px;
 }
 form {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    gap: 15px;
 }
 label {
     margin-bottom: 5px;
+    font-size: 14px;
+    font-family: var(--fuente-secundaria);
 }
 .input-group {
-    margin-bottom: 10px;
-    padding: 8px;
-    border: none;
-    border-radius: 4px;
+    margin-bottom: 12px;
+    padding: 10px;
+    border: 2px solid var(--color-secundario);
+    border-radius: 6px;
+    background-color: rgba(255, 0, 79, 0.1);
+    color: var(--color-texto);
 }
 button {
-    padding: 10px;
-    background-color: var(--color-primario);
+    padding: 12px;
+    background: linear-gradient(90deg, var(--color-secundario), #ff0099);
     color: white;
+    font-family: var(--fuente-secundaria);
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0px 0px 12px var(--color-secundario);
+    transition: 0.3s;
 }
 button:hover {
-    background-color: #2980b9;
+    background: linear-gradient(90deg, #ff0099, var(--color-secundario));
+    transform: scale(1.1);
 }
 .options {
     gap: 8px;
@@ -65,5 +81,6 @@ button:hover {
     font-size: 15px;
     margin: 20px;
     color: var(--color-texto);
+    text-shadow: 0px 0px 8px var(--color-texto);
     width: fit-content;
 }
